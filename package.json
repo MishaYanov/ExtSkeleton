@@ -1,8 +1,8 @@
 {
-  "name": "chromeextensionmodule",
-  "private": true,
-  "version": "0.0.0",
+  "name": "ext-skeleton",
+  "version": "0.0.1",
   "type": "module",
+  "bin": "./bin/cli.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
