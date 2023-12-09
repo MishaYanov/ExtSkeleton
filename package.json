@@ -23,5 +23,14 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^4.9.5",
     "vite": "^4.1.0"
-  }
+  },
+  "keywords": [
+    "scaffolding",
+    "template",
+    "react",
+    "vite",
+    "chrome-extension",
+    "project-generator",
+    "javascript"
+  ]
 }
