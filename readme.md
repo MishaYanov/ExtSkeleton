@@ -1,6 +1,6 @@
 # Creating the Skeleton
 
-terminal -> npm create extSkeleton
+terminal -> npx extSkeleton
 
 ## Modifying the skeleton
 
