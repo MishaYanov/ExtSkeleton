@@ -2,7 +2,7 @@
   "name": "ext-skeleton",
   "version": "0.0.1",
   "type": "module",
-  "bin": "./bin/cli.js",
+  "bin": "./bin/cli.cjs",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
