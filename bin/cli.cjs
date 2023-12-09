@@ -14,9 +14,16 @@ const runCommand = command =>{
 
 const repoName = process.argv[2];
 
+if (!repoName) {
+    console.log("Please provide a name for the project.");
+    console.log("For example:");
+    console.log("    npx create-ext-skeleton my-project");
+    process.exit(1);
+}
+
 const gitCheckout = `git clone --depth 1 https://github.com/MishaYanov/ExtSkeleton.git ${repoName}`;
 
-const install = `cd ${repoName} && npm install`;
+const install = `cd ${repoName}`;
 
 console.log(`Creating ${repoName}...`);
 const checkout = runCommand(gitCheckout) 

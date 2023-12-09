@@ -1,6 +1,6 @@
 # Creating the Skeleton
 
-terminal -> npx extSkeleton
+`npx extSkeleton`
 
 ## Modifying the skeleton
 
