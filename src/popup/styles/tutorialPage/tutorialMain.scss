@@ -1,0 +1,100 @@
+.tutorial-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 95svw;
+  margin: 0 auto;
+
+  .tutorial-header {
+    .tutorial-title {
+      margin-left: 1rem;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .tutorial-subtitle {
+      margin-left: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  }
+  .tutorial-container {
+    display: flex;
+    flex-direction: row;
+    width: 95svw;
+    .tutorial-dashboard {
+      width: 15svw;
+      background-color: aliceblue;
+      .tutorial-dashboard-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .tutorial-dashboard-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .tutorial-dashboard-list-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 3rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            background-color: #f5f5f5;
+            cursor: pointer;
+            &:hover {
+                background-color: #e5e5e5;
+            }
+            .tutorial-dashboard-list-item-title {
+                font-size: 1rem;
+                font-weight: 500;
+                margin-left: 1rem;
+            }
+            &.important{
+                background-color: rgb(41, 189, 0);
+                &:hover {
+                    background-color: #ff9999;
+                }
+            }
+            &.active{
+                background-color: rgb(79, 94, 174);
+                color: white;
+            }
+        }
+      }
+    }
+    .tutorial-explanation {
+      width: 85svw;
+      min-height: auto;
+      height: fit-content;
+      background-color: #f5f5f5;
+      .instance-wrapper{
+        width: 95%;
+        margin: 0 auto;
+        p{
+          margin-left: 1rem;
+          font-size: 1rem;
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+        pre{
+          background-color: #d9d9d9;
+          code{
+            font-size: 0.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

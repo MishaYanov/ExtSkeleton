@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "thisExtension",
+    "version": "0.0.1",
+    "description": "use this blueprint to create a new extension",
+    "permissions": [
+      "activeTab",
+      "clipboardRead",
+      "clipboardWrite",
+      "scripting",
+      "storage",
+      "contextMenus",
+      "debugger",
+      "tabs",
+      "webRequest",
+      "nativeMessaging", 
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "index.html"
+    },
+    "host_permissions": ["*://*/*"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["injected/exampleScript.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+}
