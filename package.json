@@ -1,6 +1,6 @@
 {
   "name": "ext-skeleton",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "bin": "./bin/cli.cjs",
   "scripts": {
@@ -8,7 +8,6 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "build:extension": "set INLINE_RUNTIME_CHUNK=false && tsc && vite build --no-minify && rollup -c",
-    "build:extension-prod": "set INLINE_RUNTIME_CHUNK=false && tsc && vite build --minify && rollup -c"
   },
   "dependencies": {
     "@types/chrome": "^0.0.253",
