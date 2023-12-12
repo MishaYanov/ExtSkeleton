@@ -40,7 +40,6 @@ export default function ComponentExample() {
   }, []);
 
   const fetchMessageFromContext = async () => {
-    debugger;
     const contextMessage = await storage.getItem(storageKeys.CONTEXTMENU);
     storage.removeItem(storageKeys.CONTEXTMENU);
     return contextMessage;
@@ -67,7 +66,6 @@ export default function ComponentExample() {
 
 
   const handleInjectionScript = () => {
-    debugger;
     backgroundPortService.sendMessageToBackground({type: portMessages.INJECTEXAMPLE})
   };
 

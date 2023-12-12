@@ -4,7 +4,7 @@ enum portMessages {
     INJECTEXAMPLE = "injectExample"
 }
 enum portNames {
-    BACKGROUND = 'background',  
+    BACKGROUND = 'background',
 }
 
 
@@ -13,8 +13,21 @@ const storage = new BackgroundStorage();
 
 createContextMenuItem(storage);
 
-portHandler.customListener((msg) => {
-    if(msg.type === portMessages.INJECTEXAMPLE){
-        injectFunction("example");
+
+const greeting = () => {
+    portHandler.customListener((msg) => {
+        if (msg.type === portMessages.INJECTEXAMPLE) {
+            injectFunction("example");
+        }
+    });
+}
+
+chrome.tabs.onActivated.addListener(activeInfo => {
+    greeting();
+});
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    if (changeInfo.url || changeInfo.status === "loading") {
+        greeting();
     }
 });
