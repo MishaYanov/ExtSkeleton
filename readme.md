@@ -1,6 +1,6 @@
 # Creating the Skeleton
 
-`npx extSkeleton`
+`npx ext-skeleton <name>` or `npx ext-skeleton ./`
 
 ## Modifying the skeleton
 
